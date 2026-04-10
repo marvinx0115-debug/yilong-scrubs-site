@@ -1,26 +1,32 @@
 ---
 ---
+<!-- GTranslate Widget -->
 <div class="gtranslate_wrapper fixed bottom-8 left-8 z-[100]"></div>
 
 <script is:inline>
   window.gtranslateSettings = {
     "default_language": "en",
-    "languages": "en,es,fr,pt,ru,ar",
-    "detect_browser_language": true,
+    "languages": ["en", "es", "fr", "pt", "ru", "ar"],
     "wrapper_selector": ".gtranslate_wrapper",
     "flag_size": 24,
-    "alt_flags": {"en": "usa"}
+    "alt_flags": {"en": "usa"},
+    "detect_browser_language": true,
+    "float_switcher_open_direction": "bottom",
+    "flag_style": "3d"
   };
 </script>
 <script is:inline src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
 <style is:global>
-  /* Ensure the widget doesn't clash with other elements */
-  .gt_container {
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
+  /* Ensure the widget is always on top and visible */
+  .gtranslate_wrapper {
+    min-width: 100px;
+    min-height: 40px;
+    display: block !important;
   }
-  .gt_container:hover {
-    opacity: 1;
+  
+  /* Additional safety to ensure visibility */
+  #gt_float_wrapper {
+    z-index: 999999 !important;
   }
 </style>

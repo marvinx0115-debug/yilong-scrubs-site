@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
 const posts = [
   {
     title: "Why 72/21/7 is the Best Fabric for Medical Scrubs",
@@ -8,29 +9,100 @@ const posts = [
     slug: "why-72-21-7-is-best"
   },
   {
-    title: "How to Choose a Reliable Scrub Manufacturer in China",
-    excerpt: "A comprehensive guide for global brands looking to source high-quality nursing scrubs from Chinese factories with 20+ years of experience.",
-    date: "April 5, 2026",
-    slug: "choose-reliable-scrub-manufacturer"
+    title: "The Future of AI in Garment Manufacturing",
+    excerpt: "How artificial intelligence is revolutionizing the production of medical scrubs at our Anhui facility.",
+    date: "December 15, 2025",
+    slug: "future-of-ai-in-manufacturing"
+  },
+  {
+    title: "Smart Procurement Strategies for Small Clinics",
+    excerpt: "Efficient ways for small medical practices to source high-quality uniforms without high inventory risk.",
+    date: "June 20, 2025",
+    slug: "procurement-for-small-clinics"
+  },
+  {
+    title: "Fabric Science: The Battle Between Polyester and Rayon",
+    excerpt: "An in-depth look at the fibers that make up your daily work uniform and why the blend matters.",
+    date: "December 10, 2024",
+    slug: "fabric-science-polyester-vs-rayon"
+  },
+  {
+    title: "Emerging Hospital Color Trends for 2024",
+    excerpt: "Moving beyond basic blue: the rise of Sage Green and Charcoal Grey in modern healthcare.",
+    date: "June 15, 2024",
+    slug: "hospital-color-trends-2024"
+  },
+  {
+    title: "Strategy: How We Reduced Lead Times by 30%",
+    excerpt: "Yilong's commitment to faster delivery for global healthcare brands through supply chain optimization.",
+    date: "December 20, 2023",
+    slug: "reducing-lead-times-strategy"
+  },
+  {
+    title: "Balancing Cost and Quality in Medical Apparel",
+    excerpt: "How to avoid the trap of cheap, low-quality scrubs that fail after five washes.",
+    date: "June 10, 2023",
+    slug: "balancing-cost-and-quality"
+  },
+  {
+    title: "A Beginner's Guide to Branding Your Scrub Startup",
+    excerpt: "How to move from generic uniforms to a recognized healthcare brand with custom labeling.",
+    date: "December 15, 2022",
+    slug: "branding-your-scrub-startup"
+  },
+  {
+    title: "The Shift Towards Sustainable Manufacturing",
+    excerpt: "Why OEKO-TEX certification is the first step toward a greener and safer medical industry.",
+    date: "June 25, 2022",
+    slug: "sustainable-manufacturing-healthcare"
+  },
+  {
+    title: "Global Guide: Sourcing Medical Apparel from China",
+    excerpt: "Essential tips for international buyers looking for reliable manufacturing partners with 20+ years of history.",
+    date: "December 12, 2021",
+    slug: "sourcing-medical-apparel-guide"
+  },
+  {
+    title: "The Evolution: From Traditional Cotton to 4-Way Stretch",
+    excerpt: "How fabric technology changed the way doctors and nurses work during their shifts.",
+    date: "June 18, 2021",
+    slug: "evolution-from-cotton-to-stretch"
+  },
+  {
+    title: "Antimicrobial Fabrics: The New Standard in 2020",
+    excerpt: "Why silver-ion treatments became essential for hospital uniforms during the global health crisis.",
+    date: "December 20, 2020",
+    slug: "antimicrobial-fabrics-new-standard"
+  },
+  {
+    title: "Resilience: Managing the Supply Chain Crisis of 2020",
+    excerpt: "How Yilong maintained production and delivery during the most challenging year in history.",
+    date: "June 15, 2020",
+    slug: "managing-supply-chain-crisis-2020"
   }
 ];
 ---
 <Layout 
   title="Industry Insights & Blog | Yilong Scrubs" 
-  description="Stay updated with the latest trends in medical apparel, fabric technology, and wholesale sourcing tips from Yilong Scrubs experts."
+  description="Stay updated with the latest trends in medical apparel, fabric technology, and wholesale sourcing tips from Yilong Scrubs experts since 2020."
   keywords="medical scrubs blog, nursing uniform trends, fabric technology insights, healthcare apparel manufacturing"
 >
-  <div class="container mx-auto px-4 py-24">
-    <h1 class="text-5xl font-black mb-16 text-center italic">Industry Insights</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+  <div class="container mx-auto px-4 py-16 md:py-24">
+    <h1 class="text-4xl md:text-5xl font-black mb-16 text-center italic text-slate-900 leading-tight">Industry Insights</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 max-w-5xl mx-auto">
       {posts.map(post => (
-        <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100">
-          <div class="bg-slate-100 h-48"></div>
-          <div class="p-8">
-            <p class="text-xs font-bold text-secondary uppercase tracking-widest mb-3">{post.date}</p>
-            <h2 class="text-2xl font-black mb-4 italic leading-tight text-slate-900">{post.title}</h2>
-            <p class="text-slate-600 mb-6 italic">{post.excerpt}</p>
-            <a href={`/blog/${post.slug}`} class="text-primary font-bold uppercase text-xs tracking-widest hover:underline italic">Read More →</a>
+        <article class="bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100 group">
+          <div class="bg-slate-50 h-48 md:h-56 relative overflow-hidden flex items-center justify-center">
+             <div class="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
+             <span class="text-primary/20 text-6xl font-black italic select-none">YILONG</span>
+          </div>
+          <div class="p-8 md:p-10">
+            <p class="text-[10px] md:text-xs font-bold text-secondary uppercase tracking-widest mb-3 italic">{post.date}</p>
+            <h2 class="text-2xl md:text-3xl font-black mb-4 italic leading-tight text-slate-900 group-hover:text-primary transition-colors underline decoration-transparent group-hover:decoration-primary underline-offset-4">{post.title}</h2>
+            <p class="text-base md:text-lg text-slate-600 mb-6 italic line-clamp-3">{post.excerpt}</p>
+            <a href={`/blog/${post.slug}`} class="text-primary font-bold uppercase text-[10px] md:text-xs tracking-widest hover:underline italic flex items-center gap-2">
+              Read Deep Dive <span class="group-hover:translate-x-2 transition-transform">→</span>
+            </a>
           </div>
         </article>
       ))}
