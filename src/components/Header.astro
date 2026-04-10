@@ -2,6 +2,7 @@
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/products', label: 'Products' },
+  { href: '/ready-to-ship', label: 'RTS (Ready to Ship)' },
   { href: '/fabric-tech', label: 'Fabric & Tech' },
   { href: '/services', label: 'Services' },
   { href: '/about', label: 'About Us' },
@@ -10,13 +11,13 @@ const navLinks = [
 ];
 ---
 <header class="bg-white shadow-sm sticky top-0 z-50">
-  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center text-left">
     <a href="/" class="text-xl md:text-2xl font-bold text-primary italic">Yilong Scrubs</a>
     
     <!-- Desktop Nav -->
-    <nav class="hidden md:flex space-x-4 lg:space-x-8">
+    <nav class="hidden md:flex space-x-2 lg:space-x-4 xl:space-x-6">
       {navLinks.map(link => (
-        <a href={link.href} class="text-slate-600 hover:text-primary font-bold uppercase text-[10px] lg:text-xs tracking-widest transition-colors">
+        <a href={link.href} class="text-slate-600 hover:text-primary font-bold uppercase text-[9px] lg:text-[10px] xl:text-xs tracking-tighter lg:tracking-widest transition-colors">
           {link.label}
         </a>
       ))}
@@ -43,7 +44,6 @@ const navLinks = [
 </header>
 
 <script is:inline>
-  // Use a more robust initialization
   document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -55,14 +55,13 @@ const navLinks = [
         const isHidden = mobileMenu.classList.contains('hidden');
         if (isHidden) {
           mobileMenu.classList.remove('hidden');
-          menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // Close icon
+          menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12'); 
         } else {
           mobileMenu.classList.add('hidden');
-          menuIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7'); // Hamburger icon
+          menuIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7'); 
         }
       });
 
-      // Close menu when clicking outside
       document.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
         menuIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
