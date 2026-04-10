@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+const posts = [
+  {
+    title: "Why 72/21/7 is the Best Fabric for Medical Scrubs",
+    excerpt: "Discover why the 72% Polyester, 21% Rayon, and 7% Spandex blend is considered the gold standard for premium healthcare uniforms.",
+    date: "April 10, 2026",
+    slug: "why-72-21-7-is-best"
+  },
+  {
+    title: "How to Choose a Reliable Scrub Manufacturer in China",
+    excerpt: "A comprehensive guide for global brands looking to source high-quality nursing scrubs from Chinese factories with 20+ years of experience.",
+    date: "April 5, 2026",
+    slug: "choose-reliable-scrub-manufacturer"
+  }
+];
+---
+<Layout 
+  title="Industry Insights & Blog | Yilong Scrubs" 
+  description="Stay updated with the latest trends in medical apparel, fabric technology, and wholesale sourcing tips from Yilong Scrubs experts."
+  keywords="medical scrubs blog, nursing uniform trends, fabric technology insights, healthcare apparel manufacturing"
+>
+  <div class="container mx-auto px-4 py-24">
+    <h1 class="text-5xl font-black mb-16 text-center italic">Industry Insights</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+      {posts.map(post => (
+        <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100">
+          <div class="bg-slate-100 h-48"></div>
+          <div class="p-8">
+            <p class="text-xs font-bold text-secondary uppercase tracking-widest mb-3">{post.date}</p>
+            <h2 class="text-2xl font-black mb-4 italic leading-tight text-slate-900">{post.title}</h2>
+            <p class="text-slate-600 mb-6 italic">{post.excerpt}</p>
+            <a href={`/blog/${post.slug}`} class="text-primary font-bold uppercase text-xs tracking-widest hover:underline italic">Read More →</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</Layout>
