@@ -1,17 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Fabric & Tech" description="Advanced fabric technology for medical scrubs.">
+<Layout title="Fabric & Tech" description="Explore Yilong's advanced medical textile collection. OEKO-TEX certified fabrics, moisture-wicking technology, and 4-way stretch.">
   <div class="container mx-auto px-4 py-24">
-    <h1 class="text-5xl font-bold mb-16 text-center italic">Fabric Technology</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      <div class="bg-white p-12 rounded-3xl border border-slate-100">
-        <h2 class="text-2xl font-bold mb-6 italic text-primary">4-Way Stretch</h2>
-        <p class="text-lg text-slate-600 leading-relaxed">Move freely without restriction. Our scrubs adapt to your body’s every movement.</p>
+    <h1 class="text-5xl font-black mb-8 text-center italic">Advanced Textile Collection</h1>
+    <p class="text-slate-500 mb-20 text-center max-w-3xl mx-auto text-lg">We don't just manufacture apparel; we innovate the very fibers medical professionals wear. Our fabric systems are the result of 20 years of continuous refinement.</p>
+    
+    <!-- Core Fabric Systems -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-32">
+      <div class="p-10 bg-white border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition-all text-center">
+        <h3 class="text-2xl font-black mb-4 italic text-primary">Elite Comfort Blend</h3>
+        <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">72% Poly / 21% Rayon / 7% Spandex</p>
+        <p class="text-slate-600 mb-6">Our signature premium blend. Rayon provides an ultra-soft, silky touch, while Polyester ensures durability and Spandex delivers superior elasticity.</p>
+        <div class="text-primary font-bold italic">205 GSM</div>
       </div>
-      <div class="bg-white p-12 rounded-3xl border border-slate-100">
-        <h2 class="text-2xl font-bold mb-6 italic text-secondary">OEKO-TEX® Certified</h2>
-        <p class="text-lg text-slate-600 leading-relaxed">Every yard of Yilong fabric is certified to be free from harmful chemicals.</p>
+
+      <div class="p-10 bg-white border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition-all text-center">
+        <h3 class="text-2xl font-black mb-4 italic text-secondary">Pro-Active Performance</h3>
+        <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Polyester / Spandex Core</p>
+        <p class="text-slate-600 mb-6">Designed for high-performance durability. Features advanced moisture-wicking capillary action to keep you dry through the longest shifts.</p>
+        <div class="text-secondary font-bold italic">180 GSM</div>
+      </div>
+
+      <div class="p-10 bg-white border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition-all text-center">
+        <h3 class="text-2xl font-black mb-4 italic text-blue-500">Air-Flow Tech</h3>
+        <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Lightweight Poly-Mesh Tech</p>
+        <p class="text-slate-600 mb-6">A feather-light weave optimized for maximum breathability. Perfect for hot-climate medical environments and high-intensity roles.</p>
+        <div class="text-blue-500 font-bold italic">130 GSM</div>
+      </div>
+    </div>
+
+    <!-- Color Palette Section -->
+    <div class="mb-32">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-4xl font-black mb-8 italic">Vibrant Color Palette</h2>
+          <p class="text-xl text-slate-700 leading-relaxed mb-8 italic">Color is identity. We offer a sophisticated range of medical colors that are reactive-dyed for maximum color fastness, ensuring your uniforms look new even after 50+ industrial washes.</p>
+          <ul class="grid grid-cols-2 gap-4 text-sm text-slate-600 font-bold uppercase tracking-widest italic">
+            <li>✓ Deep Navy Blue</li>
+            <li>✓ Royal Blue</li>
+            <li>✓ Burgundy / Wine</li>
+            <li>✓ Charcoal Grey</li>
+            <li>✓ Hunter Green</li>
+            <li>✓ Teal / Caribbean Blue</li>
+          </ul>
+        </div>
+        <div class="rounded-[3rem] overflow-hidden shadow-2xl">
+          <img src="https://sc02.alicdn.com/kf/A06c4adcbc1864fe3a78b56ab652195d3N.png" alt="Fabric Swatches Palette" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical Specs -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-slate-900 text-white p-12 rounded-[3rem]">
+        <h3 class="text-2xl font-black mb-6 italic text-secondary underline decoration-2 underline-offset-8">OEKO-TEX® Standard 100</h3>
+        <p class="text-lg text-slate-300 leading-relaxed italic">Safety you can feel. All Yilong fabrics are certified to be free from harmful substances, pH-friendly, and safe for prolonged skin contact. We prioritize your health as much as you prioritize your patients'.</p>
+      </div>
+      <div class="bg-primary text-white p-12 rounded-[3rem]">
+        <h3 class="text-2xl font-black mb-6 italic text-white underline decoration-2 underline-offset-8">Anti-Microbial & Fluid-Repellent</h3>
+        <p class="text-lg text-slate-200 leading-relaxed italic">Optional specialized finishing available for institutional orders. Advanced silver-ion treatments for odor control and fluorocarbon-free water repellency for added protection.</p>
       </div>
     </div>
   </div>
