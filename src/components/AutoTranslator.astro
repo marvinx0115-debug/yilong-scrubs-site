@@ -1,0 +1,64 @@
+---
+---
+<div id="google_translate_element" class="fixed bottom-8 left-8 z-[100] opacity-80 hover:opacity-100 transition-opacity"></div>
+
+<script is:inline>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false,
+    }, 'google_translate_element');
+  }
+</script>
+<script is:inline src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style is:global>
+  /* Hide the top bar from Google Translate */
+  .goog-te-banner-frame.skiptranslate {
+    display: none !important;
+  }
+  body {
+    top: 0px !important;
+  }
+  /* Style the widget to be professional */
+  .goog-te-gadget-simple {
+    background-color: white !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 8px 12px !important;
+    border-radius: 9999px !important;
+    font-size: 12px !important;
+    font-family: inherit !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+  }
+  .goog-te-gadget-icon {
+    display: none !important;
+  }
+  .goog-te-menu-value span {
+    color: #1e293b !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+  }
+</style>
+
+<script is:inline>
+  // Automatic detection and trigger logic
+  window.addEventListener('load', () => {
+    const userLang = navigator.language || navigator.userLanguage;
+    const langCode = userLang.split('-')[0];
+    
+    // If not English, attempt to auto-translate after a short delay
+    if (langCode !== 'en') {
+      setTimeout(() => {
+        const select = document.querySelector('.goog-te-combo');
+        if (select) {
+          select.value = langCode;
+          select.dispatchEvent(new Event('change'));
+        }
+      }, 2000); // Wait for the widget to load
+    }
+  });
+</script>

@@ -3,6 +3,8 @@ const { title, description, keywords } = Astro.props;
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppIcon from '../components/WhatsAppIcon.astro';
+import AutoTranslator from '../components/AutoTranslator.astro';
+
 
 ---
 <html lang="en">
@@ -19,6 +21,7 @@ import WhatsAppIcon from '../components/WhatsAppIcon.astro';
 		<main class="flex-grow">
 			<slot />
 		</main>
+		<AutoTranslator />
 		<WhatsAppIcon />
 		<Footer />
 	</body>
