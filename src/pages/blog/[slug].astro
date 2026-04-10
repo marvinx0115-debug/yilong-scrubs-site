@@ -1,0 +1,92 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const posts = [
+    {
+      slug: "why-72-21-7-is-best",
+      title: "Why 72/21/7 is the Best Fabric for Medical Scrubs",
+      date: "April 10, 2026",
+      keywords: "72% Polyester 21% Rayon 7% Spandex, medical scrub fabric, healthcare uniform material",
+      description: "Discover why the 72/21/7 blend is the gold standard for premium medical scrubs, offering comfort, durability, and stretch.",
+      content: `
+        <p class="mb-6">In the demanding world of healthcare, a uniform is more than just clothing—it's professional gear. At Yilong Scrubs, we've spent two decades testing various textile combinations, and one ratio consistently stands above the rest: <strong>72% Polyester, 21% Rayon, and 7% Spandex.</strong></p>
+        
+        <h2 class="text-3xl font-bold mt-12 mb-6 italic">The Triple Threat: How it Works</h2>
+        
+        <h3 class="text-xl font-bold mb-2">1. Polyester (72%): The Backbone of Durability</h3>
+        <p class="mb-6 text-slate-600 italic">Polyester is the engine room of the fabric. At 72%, it provides the high tensile strength required to survive 50+ industrial washes without losing shape or pilling. It is naturally wrinkle-resistant, meaning you look crisp at the end of your shift just as you did at the start.</p>
+        
+        <h3 class="text-xl font-bold mb-2">2. Rayon (21%): The Soul of Comfort</h3>
+        <p class="mb-6 text-slate-600 italic">Rayon is a semi-synthetic fiber that mimics the feel of silk. By integrating 21% Rayon, we transform a standard work uniform into a soft, breathable garment. It allows for superior moisture absorption, keeping your skin cool during high-intensity medical procedures.</p>
+        
+        <h3 class="text-xl font-bold mb-2">3. Spandex (7%): The Freedom of Movement</h3>
+        <p class="mb-6 text-slate-600 italic">Medical work is physical. Whether you're reaching for equipment or assisting a patient, you need 4-way stretch. 7% Spandex provides the perfect amount of "give" without the fabric becoming baggy or losing its silhouette over time.</p>
+        
+        <blockquote class="border-l-4 border-primary p-6 bg-slate-50 italic my-12 text-lg text-slate-700">
+          "The 72/21/7 ratio isn't just a recipe; it's a science. It's the exact point where maximum performance meets ultimate comfort." — Yilong Textile Team
+        </blockquote>
+        
+        <h2 class="text-3xl font-bold mt-12 mb-6 italic">Why Professionals Choose Yilong's Elite Blend</h2>
+        <p class="mb-6">Our 205GSM Elite series uses this specific ratio to ensure total opacity (no see-through issues) and a professional drape. If you are building a premium medical brand, starting with the right fabric is the single most important decision you will make.</p>
+      `
+    },
+    {
+      slug: "choose-reliable-scrub-manufacturer",
+      title: "How to Choose a Reliable Scrub Manufacturer in China",
+      date: "April 5, 2026",
+      keywords: "choose scrub manufacturer China, medical apparel factory, sourcing nursing scrubs",
+      description: "A guide to finding and vetting high-quality medical scrub manufacturers in China for your healthcare brand.",
+      content: `
+        <p class="mb-6">Sourcing from overseas can be daunting. With thousands of factories claiming to be the "best," how do you identify a partner that will actually help your brand grow? Here are the 5 non-negotiable criteria for choosing a medical scrub manufacturer in China.</p>
+        
+        <h2 class="text-3xl font-bold mt-12 mb-6 italic">1. 100% Focus on Medical Apparel</h2>
+        <p class="mb-6 text-slate-600 italic">Avoid generalist factories that make everything from t-shirts to bedsheets. Medical scrubs require specific ergonomic design and specialized reinforced stitching. A dedicated factory like <strong>Yilong Scrubs</strong> understands the unique needs of healthcare professionals.</p>
+        
+        <h2 class="text-3xl font-bold mt-12 mb-6 italic">2. Fabric Certification (OEKO-TEX®)</h2>
+        <p class="mb-6 text-slate-600 italic">Medical professionals wear these garments for 12+ hours. Ensure the factory uses OEKO-TEX® Standard 100 certified fabrics. This guarantees the material is free from harmful chemicals and is safe for prolonged skin contact.</p>
+        
+        <h2 class="text-3xl font-bold mt-12 mb-6 italic">3. Flexible Low MOQs</h2>
+        <p class="mb-6 text-slate-600 italic">Massive 500-set MOQs are a red flag for rigid, old-school factories. Modern, agile manufacturers support brand growth by offering lower MOQs (10-50 sets). This allows you to test new colors and styles without risking your entire budget on inventory.</p>
+        
+        <h2 class="text-3xl font-bold mt-12 mb-6 italic">4. Direct-to-Floor Communication</h2>
+        <p class="mb-6 text-slate-600 italic">Are you talking to a trading company or the factory owner? Speed matters. Choose a partner that gives you direct access to the manufacturing team. Rapid 3-7 day sampling is only possible when communication is seamless.</p>
+        
+        <h2 class="text-3xl font-bold mt-12 mb-6 italic">5. 20+ Years of Manufacturing Heritage</h2>
+        <p class="mb-6 text-slate-600 italic">Experience is the best quality control. A factory that has survived two decades in the global market has refined its QC processes and established reliable raw material supply chains.</p>
+        
+        <div class="bg-primary text-white p-10 rounded-3xl mt-16 text-center shadow-xl">
+          <h3 class="text-2xl font-bold mb-4 italic">Ready to work with a proven specialist?</h3>
+          <p class="mb-8 italic">Yilong Scrubs meets all 5 criteria. Let's discuss your next collection.</p>
+          <a href="/contact" class="bg-secondary px-8 py-3 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-emerald-600 transition">Get Started</a>
+        </div>
+      `
+    }
+  ];
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+---
+
+<Layout 
+  title={`${post.title} | Yilong Scrubs Blog`} 
+  description={post.description}
+  keywords={post.keywords}
+>
+  <article class="container mx-auto px-4 py-24 max-w-4xl">
+    <a href="/blog" class="text-primary font-bold uppercase text-xs tracking-widest hover:underline mb-12 inline-block italic">← Back to Insights</a>
+    
+    <header class="mb-16">
+      <p class="text-sm font-bold text-secondary uppercase tracking-widest mb-4 italic">{post.date}</p>
+      <h1 class="text-5xl md:text-6xl font-black italic text-slate-900 leading-tight">{post.title}</h1>
+    </header>
+
+    <div class="prose prose-xl prose-slate max-w-none text-slate-700 leading-relaxed italic" set:html={post.content}>
+    </div>
+  </article>
+</Layout>
